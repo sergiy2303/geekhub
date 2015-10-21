@@ -1,2 +1,1 @@
-# myRepo
-Test repo
+# Lesson 3
