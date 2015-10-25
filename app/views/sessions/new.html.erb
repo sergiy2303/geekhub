@@ -1,2 +1,11 @@
 <h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<%= form_tag(session_path, method: "post") do %>
+  <%= label_tag :email, "Email" %>
+  <%= email_field_tag :email %>
+  <%= label_tag :password, "Password" %>
+  <%= password_field_tag :password %>
+  <%= submit_tag("Login") %>
+<% end %>
+<span><%= flash[:error] if flash[:error].present? %></span>
+<% flash[:error] = nil %>
+<%= link_to 'Sign up', new_user_path %>
